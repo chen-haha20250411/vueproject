@@ -1,0 +1,85 @@
+.centent {
+    height: 100%;
+}
+
+/* 检索条件 */
+.searchcondition {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.centent_name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.centent_name span {
+    margin-left: 10px;
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #333333;
+    background: #eeeeee;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+/* 表格数据 */
+.tabledata {
+    background-color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+.data {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data_search {
+    width: 700px;
+}
+
+/* 表格 */
+.table {
+    margin-top: 30px;
+}
+
+.el-table th {
+    background-color: #eeeeee;
+}
+
+.filenameimg {
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer; */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.filenamename {
+    vertical-align: middle;
+}
+
+.button {
+    cursor: pointer;
+    color: #6cb1fb;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.centent_name_p {
+    margin: 0;
+    max-width: 550px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+}
