@@ -17,12 +17,12 @@
             <span>{{ scope.row.publishDate }}</span>
           </template>
         </el-table-column>
-    <el-table-column label="项目编号" width="200">
+    <el-table-column label="项目编号" width="300">
           <template slot-scope="scope">
             <span>{{ scope.row.projectNumber }}</span>
           </template>
         </el-table-column>
-		<el-table-column label="项目名称" width="550">
+		<el-table-column label="项目名称" width="700">
           <template slot-scope="scope">
             <span>{{ scope.row.projectName }}</span>
           </template>
@@ -48,11 +48,21 @@
             <span>{{ scope.row.dataSource }}</span>
           </template>
         </el-table-column> -->
-		<el-table-column label="网页链接" width="350">
+      <el-table-column label="详细内容" width="90" align="center">
+      <template slot-scope="scope">
+        <a
+          :href="scope.row.htmlUrl"
+          target="_blank"
+          style="color: #409EFF; cursor: pointer;">
+         查看详情
+        </a>
+      </template>
+    </el-table-column>    
+		<!-- <el-table-column label="网页链接" width="350">
           <template slot-scope="scope">
             <a :href="scope.row.htmlUrl" target="_blank" class="buttonText">{{ scope.row.htmlUrl }}</a>
           </template>
-        </el-table-column>
+        </el-table-column> -->
         <el-table-column :label="$t('table.actions')" align="center" width="150" class-name="small-padding fixed-width">
           <template slot-scope="scope">
             <el-button type="primary" size="mini" @click="update(scope.row.id)" v-has="'edit'">{{ $t('table.edit') }}</el-button>
@@ -122,7 +132,7 @@ export default {
       listLoading: false,
       q: {
         currPageNo: 1,
-        limit: 15,
+        limit: 25,
         roleName: '',
       },
       showList: true,

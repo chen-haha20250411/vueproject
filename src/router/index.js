@@ -97,25 +97,35 @@ export const constantRouterMap = [
   //     }
   //   ]
   // }
-  {
-    path: '/zhongbiao',
-    component: Layout,
-    children: [
-      {
-        path: 'list',
-        component: () => import('@/views/zhongbiao/list.vue'),
-        name: 'ZhongbiaoList',
-        meta: { title: '中标列表', icon: 'list' }
-      },
-      {
-        path: 'detail/:id',
-        component: () => import('@/views/zhongbiao/detail.vue'),
-        name: 'ZhongbiaoDetail',
-        meta: { title: '中标详情', noCache: true },
-        hidden: true
-      }
-    ]
-  }
+  // {
+  //   path: '/zhongbiao',
+  //   component: Layout,
+  //   children: [
+  //     // {
+  //     //   path: 'list',
+  //     //   component: () => import('@/views/zhongbiao/list.vue'),
+  //     //   name: 'ZhongbiaoList',
+  //     //   meta: { title: '中标列表', icon: 'list' }
+  //     // },
+  //     {
+  //       path: 'detail/:id',
+  //       component: () => import('@/views/zhongbiao/detail.vue'),
+  //       name: 'ZhongbiaoDetail',
+  //       meta: { title: '中标详情', noCache: true },
+  //       hidden: true
+  //     }
+  //   ]
+  // }
+ 
+    // ...其他路由...
+    {
+      path: '/zhongbiao/detail/:id',
+      component: () => import('@/views/zhongbiao/detail.vue'),
+      name: 'ZhongbiaoDetail',
+      meta: { title: '中标详情', noCache: true },
+      hidden: true
+    }
+  
 ]
 
 export default new Router({
